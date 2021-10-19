@@ -39,6 +39,10 @@ public class Benutzer {
         this.sport = sport;
     }
 
+    /**
+     *
+     * @return die Summe der Zeiten der Sportarten
+     */
     public double kalkuliereZeit(){
 
         double gesamteZeit = 0;
@@ -47,11 +51,22 @@ public class Benutzer {
         return gesamteZeit;
     }
 
+    /**
+     *
+     * @param sport
+     * @return die notige Zeit furs Treiben von sport
+     */
     public double kalkuliereZeit(Sport sport){
         return sport.kalkuliereZeit();
     }
 
+    /**
+     *
+     * @return die Durchschnittszeit aller Sportarten
+     */
     public double kalkuliereDurchschnittszeit(){
+        if(sport.size() == 0)
+            return 0;
         return kalkuliereZeit()/sport.size();
     }
 }
