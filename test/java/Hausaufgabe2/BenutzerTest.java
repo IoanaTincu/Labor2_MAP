@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BenutzerTest {
@@ -25,15 +24,15 @@ class BenutzerTest {
     @org.junit.jupiter.api.Test
     void kalkuliereZeit() {
         assertEquals(benutzer1.kalkuliereZeit(), 225);
-        assertEquals(fussball1.kalkuliereZeit(), 0);
+        assertEquals(benutzer2.kalkuliereZeit(), 0);
     }
 
     @org.junit.jupiter.api.Test
     void testKalkuliereZeit() {
-        assertEquals(basketball1.kalkuliereZeit(), 55);
-        assertEquals(hindernislauf1.kalkuliereZeit(), 30);
-        assertEquals(hochsprung1.kalkuliereZeit(), 20);
-        assertEquals(fussball1.kalkuliereZeit(), 65);
+        assertEquals(benutzer1.kalkuliereZeit(basketball1), 55);
+        assertEquals(benutzer1.kalkuliereZeit(hindernislauf1), 30);
+        assertEquals(benutzer1.kalkuliereZeit(hochsprung1), 20);
+        assertEquals(benutzer1.kalkuliereZeit(fussball1), 65);
     }
 
     @org.junit.jupiter.api.Test

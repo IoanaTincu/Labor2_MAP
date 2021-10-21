@@ -53,7 +53,7 @@ public class Benutzer {
 
     /**
      *
-     * @param sport
+     * @param sport ein abgeleitetes Objekt der Interface
      * @return die notige Zeit furs Treiben von sport
      */
     public double kalkuliereZeit(Sport sport){
